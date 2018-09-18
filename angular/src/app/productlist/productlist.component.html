@@ -1,0 +1,10 @@
+<div class="card" style="width: 18rem;" *ngFor="let prod of allProducts ">
+  <img class="card-img-top" src=prod.url alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Name: {{prod.title}}</h5>
+    <p class="card-text">Price :${{prod.price}}</p>
+    <a [routerLink]="['edit/',prod._id]" class="btn btn-primary">Edit</a>
+    <a (click)="delete(prod._id)" class="btn btn-success">Delete</a>
+  </div>
+</div>
+<router-outlet (deactivate)="reload()"></router-outlet>

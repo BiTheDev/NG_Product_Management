@@ -1,0 +1,10 @@
+<div class="container">
+  {{errors | json}}
+  {{updateProduct | json}}
+  <form (submit)="update()">
+  <input type="text" name="updateProduct['title']" [(ngModel)]="updateProduct['title']" value="updateProduct['title']">
+  <input type="number" name="updateProduct['price']" [(ngModel)]="updateProduct['price']" value="updateProduct['price']">
+  <input type="text" name="updateProduct['url']" [(ngModel)]="updateProduct['url']" value="updateProduct['url']">  
+  <button type="submit">Update</button>
+</form>
+</div>

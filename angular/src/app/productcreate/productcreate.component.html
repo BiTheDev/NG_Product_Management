@@ -1,0 +1,8 @@
+<h2>Create a New Product</h2>
+{{errors | json}}
+<form (submit)="Create()">
+  <p>Name<input type="text" name="newProduct.title" [(ngModel)]="newProduct.title"></p>
+  <p>Price $:<input type="number" name="newProduct.price" [(ngModel)]="newProduct.price"></p>
+  <p>URL:<input type="text" name="newProduct.url" [(ngModel)] ="newProduct.url"></p>
+  <button type="submit">Create</button>
+</form>
